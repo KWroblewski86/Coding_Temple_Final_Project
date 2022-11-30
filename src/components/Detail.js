@@ -21,7 +21,7 @@ const Detail = ({ exerciseDetail }) => {
       icon: EquipmentImage,
       name: equipment,
     },
-  ]
+  ];
 
   return (
     <Stack gap="60px" sx={{flexDirection: { lg: 'row'}, p: '20px', alignItems: 'center'}}>
@@ -35,7 +35,7 @@ const Detail = ({ exerciseDetail }) => {
           is one of the best exercises to target your <b>{target}</b>.
           It will help you improve your mood and gain energy.
         </Typography>
-        {extraDetail.map((item) => (
+        {extraDetail?.map((item) => (
           <Stack key={item.name} direction="row" gap="24px" alignItems="center">
             <Button sx={{ background: '#fff2db', borderRadius: '50%', width: '100px', height: '100px'}}>
               <img src={item.icon} alt={bodyPart} style={{ width: '50px', height: '50px'}} />
@@ -47,7 +47,7 @@ const Detail = ({ exerciseDetail }) => {
         ))}
       </Stack>
     </Stack>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;
